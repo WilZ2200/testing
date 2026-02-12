@@ -1,0 +1,29 @@
+\begin{table}[htbp]
+\centering
+\caption{Willingness-to-Pay Estimates (Conditional Logit)}
+\label{tab:wtp}
+\begin{tabular}{lrrr}
+\toprule
+Attribute Level Change & WTP (\$) & 95\% CI Lower & 95\% CI Upper \\
+\midrule
+MRI vs. Mammography & 65.82 & 44.22 & 89.95 \\
+Ultrasound vs. Mammography & -37.47 & -57.08 & -18.49 \\
+Biennial vs. Annual & -31.78 & -52.99 & -13.18 \\
+Triennial vs. Annual & -72.36 & -91.72 & -53.22 \\
+Sensitivity (per 1pp) & 7.44 & 6.41 & 8.58 \\
+False positive rate (per 1pp) & -10.19 & -13.34 & -7.38 \\
+1 week vs. 1 day wait & -39.25 & -72.14 & -4.64 \\
+3 weeks vs. 1 day wait & -100.62 & -134.10 & -68.08 \\
+Mild vs. No pain & -37.68 & -70.15 & -5.35 \\
+Moderate vs. No pain & -69.42 & -100.79 & -39.04 \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}
+\small
+\item Note: WTP = $-\hat{\beta}_{\text{attribute}} / \hat{\beta}_{\text{cost}}$.
+\item 95\% CI computed using Krinsky-Robb simulation (1,000 draws).
+\item Positive values indicate willingness to pay for the attribute level change.
+\item Negative values indicate compensation required to accept the attribute level.
+\end{tablenotes}
+\end{table}
+

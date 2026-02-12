@@ -1,0 +1,110 @@
+\documentclass[12pt,letterpaper]{article}
+
+% Mathematics
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+% Tables
+\usepackage{booktabs}
+\usepackage{threeparttable}
+\usepackage{multirow}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{tabularx}
+
+% Graphics
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{subcaption}
+
+% Layout
+\usepackage[margin=1in]{geometry}
+\usepackage{setspace}
+\usepackage{lineno}
+\usepackage{pdflscape}
+
+% References and links
+\usepackage{natbib}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+
+% Other
+\usepackage{xcolor}
+
+% Line numbering and double spacing
+\linenumbers
+\doublespacing
+
+% Title information
+\title{\textbf{Patient Preferences for Breast Cancer Screening: A Discrete Choice Experiment}}
+
+\author{
+  Author One\textsuperscript{1,*} \and
+  Author Two\textsuperscript{2} \and
+  Author Three\textsuperscript{1}
+}
+
+\date{
+  \textsuperscript{1}Department of Health Policy and Management, University Name \\
+  \textsuperscript{2}Department of Economics, University Name \\[1em]
+  \textsuperscript{*}Corresponding author: author.one@university.edu \\[2em]
+  \today
+}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+\noindent
+\textbf{Background:} Breast cancer screening guidelines continue to evolve, yet the preferences of women regarding screening attributes remain insufficiently understood. Incorporating patient preferences into screening program design is essential for improving uptake and aligning clinical practice with patient-centered care.
+
+\noindent
+\textbf{Objective:} This study employed a discrete choice experiment (DCE) to estimate women's preferences for breast cancer screening attributes, calculate willingness-to-pay (WTP) estimates, and identify preference heterogeneity across population subgroups.
+
+\noindent
+\textbf{Methods:} A DCE was administered to 500 women aged 40--74 recruited via an online panel and clinic-based sampling. The experiment included seven attributes: screening method, frequency, out-of-pocket cost, sensitivity, false-positive rate, waiting time for results, and physical discomfort. Choice data were analyzed using conditional logit, mixed logit, and latent class models.
+
+\noindent
+\textbf{Results:} All screening attributes significantly influenced women's choices. Sensitivity and out-of-pocket cost were the most important attributes. Women were willing to pay approximately \$180 for MRI over mammography, \$250 for a 25-percentage-point increase in sensitivity, and \$80 per 5-percentage-point reduction in false-positive rates. Latent class analysis identified three distinct preference segments: accuracy-focused (40\%), cost-conscious (35\%), and convenience-seeking (25\%) women.
+
+\noindent
+\textbf{Conclusions:} Women exhibit substantial and heterogeneous preferences for breast cancer screening attributes. Screening programs that offer flexible options tailored to distinct preference segments may improve uptake and patient satisfaction. These findings have implications for screening guideline development and coverage policy decisions.
+
+\vspace{1em}
+\noindent
+\textbf{Keywords:} discrete choice experiment; breast cancer screening; patient preferences; willingness-to-pay; latent class analysis; mammography; health economics
+
+\vspace{1em}
+\noindent
+\textbf{JEL Classification:} I11, I12, I18, C25
+\end{abstract}
+
+\newpage
+\tableofcontents
+\newpage
+
+% Introduction
+\input{sections/01_introduction}
+
+% Literature Review
+\input{sections/02_literature_review}
+
+% Methods
+\input{sections/03_methods}
+
+% Results
+\input{sections/04_results}
+
+% Discussion
+\input{sections/05_discussion}
+
+% Conclusion
+\input{sections/06_conclusion}
+
+% References
+\newpage
+\bibliographystyle{apalike}
+\bibliography{../literature/references}
+
+\end{document}

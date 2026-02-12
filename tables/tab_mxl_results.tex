@@ -1,0 +1,38 @@
+\begin{table}[htbp]
+\centering
+\caption{Mixed Logit Model Results}
+\label{tab:mxl_results}
+\begin{tabular}{lrrrr}
+\toprule
+ & \multicolumn{2}{c}{Mean} & \multicolumn{2}{c}{SD} \\
+\cmidrule(lr){2-3} \cmidrule(lr){4-5}
+Attribute Level & Coef. & SE & Coef. & SE \\
+\midrule
+MRI vs.\ Mammography & 0.4150*** & 0.0654 & 1.0443*** & 0.0989 \\
+Ultrasound vs.\ Mammography & -0.2534*** & 0.0624 & 0.5983*** & 0.1145 \\
+Biennial vs.\ Annual & -0.1857** & 0.0592 & -0.2665 & 0.2010 \\
+Triennial vs.\ Annual & -0.4964*** & 0.0580 & -0.6164*** & 0.1068 \\
+Cost (per \$1) & -0.0064*** & 0.0002 & -- & -- \\
+Sensitivity (per 1 pp) & 0.0501*** & 0.0031 & 0.0358*** & 0.0014 \\
+False positive rate (per 1 pp) & -0.0690*** & 0.0097 & -- & -- \\
+1 week vs.\ 1 day wait & -0.1889 & 0.1222 & -0.4351 & 0.2831 \\
+3 weeks vs.\ 1 day wait & -0.8311*** & 0.1172 & -0.2550 & 0.3935 \\
+Mild vs.\ None & -0.3177** & 0.1164 & -0.0601 & 0.4220 \\
+Moderate vs.\ None & -0.6517*** & 0.1200 & 0.4019 & 0.3121 \\
+Opt-out (no screening) & -0.1954 & 0.3206 & -0.0305 & 0.2955 \\
+\midrule
+Log-likelihood & \multicolumn{4}{c}{-4787.87} \\
+AIC & \multicolumn{4}{c}{9619.74} \\
+BIC & \multicolumn{4}{c}{9767.13} \\
+McFadden $R^2$ & \multicolumn{4}{c}{0.2736} \\
+Halton draws & \multicolumn{4}{c}{500} \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}
+\small
+\item Note: *** $p < 0.001$, ** $p < 0.01$, * $p < 0.05$, . $p < 0.1$.
+\item All parameters except cost and FPR specified as random (normal distribution).
+\item SD = standard deviation of random parameter distribution.
+\end{tablenotes}
+\end{table}
+

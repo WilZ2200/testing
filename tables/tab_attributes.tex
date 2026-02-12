@@ -1,0 +1,25 @@
+\begin{table}[htbp]
+\centering
+\caption{DCE Attributes and Levels}
+\label{tab:attributes}
+\begin{tabular}{lll}
+\toprule
+Attribute & Levels & Coding \\
+\midrule
+Screening method & Mammography (ref.), MRI, Ultrasound & Dummy \\
+Screening frequency & Annual (ref.), Biennial, Triennial & Dummy \\
+Out-of-pocket cost & \$0, \$50, \$150, \$300 & Continuous \\
+Test sensitivity & 70\%, 85\%, 95\% & Continuous \\
+False positive rate & 5\%, 10\%, 15\% & Continuous \\
+Waiting time for results & 1 day (ref.), 1 week, 3 weeks & Dummy \\
+Pain/discomfort & None (ref.), Mild, Moderate & Dummy \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}
+\small
+\item Note: ref.\ = reference level. Continuous variables entered as linear terms.
+\item Design: D-optimal fractional factorial, 36 choice sets in 3 blocks of 12.
+\item Each choice set: 2 screening alternatives + opt-out (no screening).
+\end{tablenotes}
+\end{table}
+

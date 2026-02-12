@@ -1,0 +1,88 @@
+# R files
+.Rhistory
+.Rapp.history
+.RData
+.Ruserdata
+.Rproj.user/
+*.Rproj
+
+# R package library
+packrat/
+renv/
+renv.lock
+
+# LaTeX auxiliary files
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
+*.synctex(busy)
+*.toc
+*.lof
+*.lot
+*.nav
+*.snm
+*.vrb
+*.bcf
+*.run.xml
+*.idx
+*.ilg
+*.ind
+*.glo
+*.gls
+*.ist
+
+# LaTeX generated files (keep source, ignore compiled)
+*.pdf
+!literature/*.pdf
+
+# Data files - never commit raw data
+data/raw/*.csv
+data/raw/*.xlsx
+data/raw/*.sav
+data/raw/*.dta
+data/raw/*.rds
+data/processed/*.csv
+data/processed/*.rds
+data/processed/*.rda
+
+# Sensitive files
+*.env
+credentials*
+*_api_key*
+*token*
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor files
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Ngene files
+*.ngd
+*.ngs
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+
+# Qualtrics exports
+*.qsf
+
+# Large binary files
+*.zip
+*.tar.gz
+*.7z

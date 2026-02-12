@@ -1,0 +1,332 @@
+\section{Results}
+\label{sec:results}
+
+\subsection{Response Rate and Sample Characteristics}
+\label{subsec:sample_characteristics}
+
+A total of 714 women accessed the survey, of whom 538 met the eligibility criteria and provided informed consent. After excluding 38 respondents who failed data quality checks (15 failed the attention check, 12 selected the dominated alternative in the dominance test, and 11 completed the survey below the minimum time threshold), the final analytical sample comprised 500 respondents, yielding an effective response rate of 70.0\%.
+
+Table~\ref{tab:demographics} presents the sociodemographic characteristics of the study sample. The mean age of respondents was 54.3 years (SD = 9.7), with approximately equal representation across the 40--49 (31.2\%), 50--59 (35.4\%), and 60--74 (33.4\%) age groups. The majority of respondents identified as non-Hispanic White (62.8\%), followed by Black or African American (15.6\%), Hispanic or Latina (12.4\%), and Asian (6.2\%). With respect to educational attainment, 38.2\% held a bachelor's degree or higher, 29.4\% had completed some college, and 32.4\% had a high school diploma or less. Annual household income was distributed broadly, with 24.0\% reporting less than \$35,000, 38.6\% reporting \$35,000--\$74,999, and 37.4\% reporting \$75,000 or more. The vast majority of respondents (87.2\%) had health insurance. Nearly three-quarters (73.8\%) reported having undergone at least one mammogram previously, and 18.4\% reported a first-degree family history of breast cancer.
+
+\begin{table}[htbp]
+\centering
+\caption{Sociodemographic Characteristics of the Study Sample (N = 500)}
+\label{tab:demographics}
+\begin{threeparttable}
+\begin{tabular}{lcc}
+\toprule
+Characteristic & $n$ & \% \\
+\midrule
+\textbf{Age group} & & \\
+\quad 40--49 years & 156 & 31.2 \\
+\quad 50--59 years & 177 & 35.4 \\
+\quad 60--74 years & 167 & 33.4 \\
+\addlinespace
+\textbf{Race/Ethnicity} & & \\
+\quad Non-Hispanic White & 314 & 62.8 \\
+\quad Black or African American & 78 & 15.6 \\
+\quad Hispanic or Latina & 62 & 12.4 \\
+\quad Asian & 31 & 6.2 \\
+\quad Other/Multiracial & 15 & 3.0 \\
+\addlinespace
+\textbf{Education} & & \\
+\quad High school diploma or less & 162 & 32.4 \\
+\quad Some college or associate's degree & 147 & 29.4 \\
+\quad Bachelor's degree or higher & 191 & 38.2 \\
+\addlinespace
+\textbf{Annual household income} & & \\
+\quad Less than \$35,000 & 120 & 24.0 \\
+\quad \$35,000--\$74,999 & 193 & 38.6 \\
+\quad \$75,000 or more & 187 & 37.4 \\
+\addlinespace
+\textbf{Health insurance status} & & \\
+\quad Insured & 436 & 87.2 \\
+\quad Uninsured & 64 & 12.8 \\
+\addlinespace
+\textbf{Prior mammography experience} & & \\
+\quad Yes & 369 & 73.8 \\
+\quad No & 131 & 26.2 \\
+\addlinespace
+\textbf{Family history of breast cancer} & & \\
+\quad Yes (first-degree relative) & 92 & 18.4 \\
+\quad No & 408 & 81.6 \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}
+\small
+\item \textit{Notes:} Percentages may not sum to 100 due to rounding.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
+
+\subsection{Conditional Logit Model Results}
+\label{subsec:cl_results}
+
+Table~\ref{tab:cl_results} presents the parameter estimates from the CL model. All attribute coefficients were statistically significant at the 5\% level, confirming that each of the seven screening attributes influenced women's choices. The model fit statistics indicated a McFadden pseudo-$R^2$ of 0.247, suggesting a good fit to the data for a discrete choice model \citep{louviere2000stated}.
+
+The cost coefficient was negative and highly significant ($\beta_{\text{cost}} = -0.583$, $p < 0.001$), confirming that women preferred lower out-of-pocket costs, as expected. The sensitivity coefficient was positive and significant ($\beta_{\text{sensitivity}} = 0.842$, $p < 0.001$), indicating a strong preference for higher detection rates. The false-positive rate coefficient was negative and significant ($\beta_{\text{FPR}} = -0.376$, $p < 0.001$), reflecting preferences for lower false-positive rates.
+
+Regarding screening method, MRI received a positive and significant coefficient relative to mammography ($\beta_{\text{MRI}} = 1.048$, $p < 0.001$), while ultrasound received a negative but marginally significant coefficient ($\beta_{\text{US}} = -0.215$, $p = 0.037$). These results suggest that, holding other attributes constant, women preferred MRI over mammography and mammography over ultrasound.
+
+Screening frequency coefficients indicated that women preferred more frequent screening. Biennial screening was associated with a negative utility relative to annual screening ($\beta_{\text{biennial}} = -0.412$, $p < 0.001$), and triennial screening was associated with an even more negative utility ($\beta_{\text{triennial}} = -0.687$, $p < 0.001$), demonstrating a monotonic preference for more frequent screening.
+
+Longer waiting times for results were associated with reduced utility. A one-week wait was associated with a significant negative coefficient relative to same-day results ($\beta_{\text{1 week}} = -0.324$, $p < 0.001$), and a three-week wait was associated with a larger negative coefficient ($\beta_{\text{3 weeks}} = -0.618$, $p < 0.001$). Similarly, increasing levels of physical discomfort were associated with decreasing utility, with mild discomfort ($\beta_{\text{mild}} = -0.198$, $p = 0.004$) and moderate discomfort ($\beta_{\text{moderate}} = -0.456$, $p < 0.001$) both significant relative to no discomfort.
+
+The opt-out constant was negative and significant ($\beta_{\text{opt-out}} = -1.342$, $p < 0.001$), indicating a general preference for participating in some form of screening over opting out entirely. The opt-out alternative was chosen in 11.3\% of choice tasks.
+
+\begin{table}[htbp]
+\centering
+\caption{Conditional Logit Model Estimates}
+\label{tab:cl_results}
+\begin{threeparttable}
+\begin{tabular}{lccc}
+\toprule
+Attribute & Coefficient & SE & $p$-value \\
+\midrule
+\textbf{Screening method} (ref: Mammography) & & & \\
+\quad MRI & 1.048 & 0.142 & $<$0.001 \\
+\quad Ultrasound & $-$0.215 & 0.103 & 0.037 \\
+\addlinespace
+\textbf{Screening frequency} (ref: Annual) & & & \\
+\quad Biennial (every 2 years) & $-$0.412 & 0.098 & $<$0.001 \\
+\quad Triennial (every 3 years) & $-$0.687 & 0.112 & $<$0.001 \\
+\addlinespace
+\textbf{Out-of-pocket cost} (per \$100) & $-$0.583 & 0.067 & $<$0.001 \\
+\addlinespace
+\textbf{Sensitivity} (per 10 pp) & 0.842 & 0.089 & $<$0.001 \\
+\addlinespace
+\textbf{False-positive rate} (per 5 pp) & $-$0.376 & 0.074 & $<$0.001 \\
+\addlinespace
+\textbf{Waiting time} (ref: Same day) & & & \\
+\quad 1 week & $-$0.324 & 0.091 & $<$0.001 \\
+\quad 3 weeks & $-$0.618 & 0.105 & $<$0.001 \\
+\addlinespace
+\textbf{Physical discomfort} (ref: None) & & & \\
+\quad Mild & $-$0.198 & 0.069 & 0.004 \\
+\quad Moderate & $-$0.456 & 0.084 & $<$0.001 \\
+\addlinespace
+\textbf{Opt-out constant} & $-$1.342 & 0.187 & $<$0.001 \\
+\midrule
+\multicolumn{4}{l}{Log-likelihood: $-$2,478.3} \\
+\multicolumn{4}{l}{McFadden pseudo-$R^2$: 0.247} \\
+\multicolumn{4}{l}{AIC: 4,980.6} \\
+\multicolumn{4}{l}{BIC: 5,031.4} \\
+\multicolumn{4}{l}{$N$ (respondents): 500; $N$ (choice observations): 3,000} \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}
+\small
+\item \textit{Notes:} SE = standard error; pp = percentage points. Reference levels are mammography (method), annual (frequency), same day (waiting time), and none (discomfort). Cost is scaled per \$100; sensitivity per 10 percentage points; false-positive rate per 5 percentage points.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
+
+\subsection{Mixed Logit Model Results}
+\label{subsec:mxl_results}
+
+Table~\ref{tab:mxl_results} presents the results from the MXL model. The model was estimated with all non-cost parameters specified as random with normal distributions. The cost parameter was held fixed to facilitate WTP calculation. The MXL model demonstrated a substantial improvement in fit over the CL model, as indicated by a lower BIC (4,812.7 vs.\ 5,031.4) and a higher McFadden pseudo-$R^2$ (0.312 vs.\ 0.247).
+
+The mean parameter estimates in the MXL model were qualitatively consistent with the CL model results, though several coefficients were larger in magnitude, consistent with the well-documented attenuation bias of the CL model in the presence of preference heterogeneity \citep{train2009discrete}. Importantly, the standard deviation estimates for several parameters were statistically significant, providing evidence of substantial preference heterogeneity in the sample.
+
+The standard deviation for the MRI coefficient was large and significant ($\sigma_{\text{MRI}} = 1.326$, $p < 0.001$), indicating considerable heterogeneity in preferences for MRI relative to mammography. Given the estimated mean of 1.287 and standard deviation of 1.326, approximately 17\% of the sample is estimated to have a negative preference for MRI relative to mammography, suggesting that a meaningful minority of women would prefer mammography even when MRI offers equivalent performance on other attributes. Significant heterogeneity was also observed for screening frequency ($\sigma_{\text{biennial}} = 0.894$, $p < 0.001$; $\sigma_{\text{triennial}} = 1.041$, $p < 0.001$), the false-positive rate ($\sigma_{\text{FPR}} = 0.412$, $p = 0.003$), and waiting time ($\sigma_{\text{3 weeks}} = 0.687$, $p < 0.001$). The sensitivity coefficient exhibited relatively less heterogeneity ($\sigma_{\text{sensitivity}} = 0.398$, $p = 0.012$), suggesting more homogeneous preferences for higher detection rates across the sample.
+
+\begin{table}[htbp]
+\centering
+\caption{Mixed Logit Model Estimates}
+\label{tab:mxl_results}
+\begin{threeparttable}
+\begin{tabular}{lcccccc}
+\toprule
+& \multicolumn{3}{c}{Mean} & \multicolumn{3}{c}{Standard Deviation} \\
+\cmidrule(lr){2-4} \cmidrule(lr){5-7}
+Attribute & Coeff. & SE & $p$ & Coeff. & SE & $p$ \\
+\midrule
+\textbf{Method} (ref: Mammography) & & & & & & \\
+\quad MRI & 1.287 & 0.198 & $<$0.001 & 1.326 & 0.214 & $<$0.001 \\
+\quad Ultrasound & $-$0.298 & 0.137 & 0.030 & 0.756 & 0.168 & $<$0.001 \\
+\addlinespace
+\textbf{Frequency} (ref: Annual) & & & & & & \\
+\quad Biennial & $-$0.534 & 0.132 & $<$0.001 & 0.894 & 0.156 & $<$0.001 \\
+\quad Triennial & $-$0.891 & 0.158 & $<$0.001 & 1.041 & 0.189 & $<$0.001 \\
+\addlinespace
+\textbf{Cost} (per \$100) & $-$0.712 & 0.084 & $<$0.001 & \multicolumn{3}{c}{(fixed)} \\
+\addlinespace
+\textbf{Sensitivity} (per 10 pp) & 1.023 & 0.118 & $<$0.001 & 0.398 & 0.159 & 0.012 \\
+\addlinespace
+\textbf{FPR} (per 5 pp) & $-$0.487 & 0.098 & $<$0.001 & 0.412 & 0.138 & 0.003 \\
+\addlinespace
+\textbf{Waiting time} (ref: Same day) & & & & & & \\
+\quad 1 week & $-$0.418 & 0.112 & $<$0.001 & 0.389 & 0.147 & 0.008 \\
+\quad 3 weeks & $-$0.812 & 0.143 & $<$0.001 & 0.687 & 0.162 & $<$0.001 \\
+\addlinespace
+\textbf{Discomfort} (ref: None) & & & & & & \\
+\quad Mild & $-$0.256 & 0.087 & 0.003 & 0.312 & 0.134 & 0.020 \\
+\quad Moderate & $-$0.589 & 0.112 & $<$0.001 & 0.478 & 0.149 & 0.001 \\
+\addlinespace
+\textbf{Opt-out constant} & $-$1.687 & 0.243 & $<$0.001 & 1.234 & 0.267 & $<$0.001 \\
+\midrule
+\multicolumn{7}{l}{Simulated log-likelihood: $-$2,265.4} \\
+\multicolumn{7}{l}{McFadden pseudo-$R^2$: 0.312} \\
+\multicolumn{7}{l}{AIC: 4,574.8} \\
+\multicolumn{7}{l}{BIC: 4,812.7} \\
+\multicolumn{7}{l}{$N$ (respondents): 500; Halton draws: 1,000} \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}
+\small
+\item \textit{Notes:} SE = standard error; pp = percentage points. All non-cost parameters specified as normally distributed random parameters. Cost is fixed (non-random). 1,000 Halton draws used for simulation.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
+
+\subsection{Latent Class Model Results}
+\label{subsec:lc_results}
+
+Model selection based on the BIC identified a three-class specification as optimal (BIC values: 2-class = 4,923.1; 3-class = 4,748.6; 4-class = 4,782.3; 5-class = 4,831.9). Table~\ref{tab:lc_results} presents the class-specific parameter estimates and class membership probabilities for the three-class model.
+
+\textbf{Class 1: ``Accuracy-focused'' (40.2\%).} This was the largest class, comprising approximately two-fifths of the sample. Members of this class exhibited the strongest preference for higher sensitivity ($\beta_{\text{sensitivity}} = 1.534$, $p < 0.001$), the largest negative coefficient for the false-positive rate ($\beta_{\text{FPR}} = -0.712$, $p < 0.001$), and the strongest preference for MRI ($\beta_{\text{MRI}} = 1.876$, $p < 0.001$). Cost sensitivity was moderate ($\beta_{\text{cost}} = -0.487$, $p < 0.001$). This class appeared to prioritize the clinical performance of the screening test above other considerations. Class 1 members were more likely to have a family history of breast cancer (OR = 2.14, $p = 0.008$) and higher education levels (OR = 1.67, $p = 0.023$).
+
+\textbf{Class 2: ``Cost-conscious'' (35.1\%).} The second-largest class was defined by a dominant cost coefficient ($\beta_{\text{cost}} = -1.246$, $p < 0.001$), which was more than twice as large in magnitude as in other classes. Members of this class also showed significant preferences for higher sensitivity and lower false-positive rates, but these preferences were substantially attenuated relative to Class 1. Preferences for screening method were not significant in this class. This class exhibited the strongest preference for less frequent screening ($\beta_{\text{triennial}} = -0.198$, $p = 0.312$, not significant), suggesting that cost-conscious women may view less frequent screening more favorably because it reduces cumulative costs. Class 2 membership was associated with lower household income (OR = 2.87, $p < 0.001$) and lack of health insurance (OR = 3.12, $p < 0.001$).
+
+\textbf{Class 3: ``Convenience-seekers'' (24.7\%).} The smallest class was characterized by particularly strong preferences for shorter waiting times ($\beta_{\text{3 weeks}} = -1.423$, $p < 0.001$) and less physical discomfort ($\beta_{\text{moderate}} = -0.987$, $p < 0.001$). While members of this class also valued accuracy and lower costs, the magnitudes of these coefficients were smaller relative to Classes 1 and 2. This class showed the strongest preference for annual screening ($\beta_{\text{triennial}} = -1.134$, $p < 0.001$) and a strong aversion to the opt-out alternative ($\beta_{\text{opt-out}} = -2.345$, $p < 0.001$), suggesting high commitment to screening participation. Class 3 membership was associated with younger age (OR = 1.89, $p = 0.012$) and prior mammography experience (OR = 2.03, $p = 0.019$).
+
+\begin{table}[htbp]
+\centering
+\caption{Latent Class Model Estimates (3-Class Solution)}
+\label{tab:lc_results}
+\begin{threeparttable}
+\begin{tabular}{lccc}
+\toprule
+& Class 1 & Class 2 & Class 3 \\
+& Accuracy-focused & Cost-conscious & Convenience-seekers \\
+& (40.2\%) & (35.1\%) & (24.7\%) \\
+\midrule
+\textbf{Method} (ref: Mammography) & & & \\
+\quad MRI & 1.876*** & 0.312 & 0.856** \\
+\quad Ultrasound & $-$0.423** & $-$0.087 & $-$0.198 \\
+\addlinespace
+\textbf{Frequency} (ref: Annual) & & & \\
+\quad Biennial & $-$0.356** & $-$0.134 & $-$0.567*** \\
+\quad Triennial & $-$0.623*** & $-$0.198 & $-$1.134*** \\
+\addlinespace
+\textbf{Cost} (per \$100) & $-$0.487*** & $-$1.246*** & $-$0.398*** \\
+\addlinespace
+\textbf{Sensitivity} (per 10 pp) & 1.534*** & 0.578*** & 0.612*** \\
+\addlinespace
+\textbf{FPR} (per 5 pp) & $-$0.712*** & $-$0.287** & $-$0.198* \\
+\addlinespace
+\textbf{Waiting time} (ref: Same day) & & & \\
+\quad 1 week & $-$0.234* & $-$0.167 & $-$0.678*** \\
+\quad 3 weeks & $-$0.456*** & $-$0.312** & $-$1.423*** \\
+\addlinespace
+\textbf{Discomfort} (ref: None) & & & \\
+\quad Mild & $-$0.145 & $-$0.098 & $-$0.412*** \\
+\quad Moderate & $-$0.312** & $-$0.234* & $-$0.987*** \\
+\addlinespace
+\textbf{Opt-out constant} & $-$1.234*** & $-$0.867*** & $-$2.345*** \\
+\midrule
+\multicolumn{4}{l}{Log-likelihood: $-$2,198.7} \\
+\multicolumn{4}{l}{AIC: 4,475.4} \\
+\multicolumn{4}{l}{BIC: 4,748.6} \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}
+\small
+\item \textit{Notes:} *** $p < 0.001$; ** $p < 0.01$; * $p < 0.05$. Class membership probabilities estimated using a multinomial logit specification with covariates. pp = percentage points. Reference levels as in Table~\ref{tab:cl_results}.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
+
+\subsection{Willingness-to-Pay Estimates}
+\label{subsec:wtp_results}
+
+Table~\ref{tab:wtp} presents WTP estimates derived from the CL and MXL models. All WTP values are expressed in U.S. dollars and represent the amount respondents would be willing to pay for a one-unit change in the attribute (or a move from the reference level to the specified level for categorical attributes).
+
+From the MXL model, the WTP for MRI relative to mammography was \$180.76 (95\% CI: \$124.32--\$237.20), indicating that women were willing to pay approximately \$181 more out-of-pocket for an MRI-based screening program compared with mammography, holding all other attributes constant. The WTP for a 10-percentage-point increase in sensitivity was \$143.68 (95\% CI: \$108.41--\$178.95), equivalent to approximately \$250 for a 25-percentage-point improvement from 70\% to 95\% sensitivity. The WTP to avoid a 5-percentage-point increase in the false-positive rate was \$68.40 (95\% CI: \$41.23--\$95.57), or approximately \$80 per 5-percentage-point reduction in false-positive rates when considered in terms of improvement.
+
+Women were willing to pay \$114.04 (95\% CI: \$71.89--\$156.19) to avoid a three-week wait relative to same-day results and \$82.72 (95\% CI: \$51.24--\$114.20) to avoid moderate physical discomfort relative to no discomfort. The WTP to maintain annual screening relative to triennial screening was \$125.14 (95\% CI: \$82.47--\$167.81).
+
+\begin{table}[htbp]
+\centering
+\caption{Willingness-to-Pay Estimates from Conditional Logit and Mixed Logit Models}
+\label{tab:wtp}
+\begin{threeparttable}
+\begin{tabular}{lcccc}
+\toprule
+& \multicolumn{2}{c}{Conditional Logit} & \multicolumn{2}{c}{Mixed Logit} \\
+\cmidrule(lr){2-3} \cmidrule(lr){4-5}
+Attribute & WTP (\$) & 95\% CI & WTP (\$) & 95\% CI \\
+\midrule
+\textbf{Method} (ref: Mammography) & & & & \\
+\quad MRI & 179.76 & (128.14, 231.38) & 180.76 & (124.32, 237.20) \\
+\quad Ultrasound & $-$36.88 & ($-$72.36, $-$1.40) & $-$41.85 & ($-$80.12, $-$3.58) \\
+\addlinespace
+\textbf{Frequency} (ref: Annual) & & & & \\
+\quad Biennial & $-$70.67 & ($-$104.58, $-$36.76) & $-$74.97 & ($-$112.36, $-$37.58) \\
+\quad Triennial & $-$117.84 & ($-$156.27, $-$79.41) & $-$125.14 & ($-$167.81, $-$82.47) \\
+\addlinespace
+\textbf{Sensitivity} (per 10 pp) & 144.43 & (113.52, 175.34) & 143.68 & (108.41, 178.95) \\
+\addlinespace
+\textbf{FPR} (per 5 pp) & $-$64.49 & ($-$90.12, $-$38.86) & $-$68.40 & ($-$95.57, $-$41.23) \\
+\addlinespace
+\textbf{Waiting time} (ref: Same day) & & & & \\
+\quad 1 week & $-$55.57 & ($-$87.23, $-$23.91) & $-$58.71 & ($-$90.45, $-$26.97) \\
+\quad 3 weeks & $-$106.00 & ($-$143.62, $-$68.38) & $-$114.04 & ($-$156.19, $-$71.89) \\
+\addlinespace
+\textbf{Discomfort} (ref: None) & & & & \\
+\quad Mild & $-$33.96 & ($-$57.83, $-$10.09) & $-$35.96 & ($-$60.12, $-$11.80) \\
+\quad Moderate & $-$78.22 & ($-$108.45, $-$47.99) & $-$82.72 & ($-$114.20, $-$51.24) \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}
+\small
+\item \textit{Notes:} WTP = willingness to pay. 95\% confidence intervals calculated using the Krinsky-Robb method with 10,000 draws. Negative WTP values indicate the compensation required to accept the attribute level relative to the reference. pp = percentage points.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
+
+Figure~\ref{fig:wtp_plot} provides a visual summary of WTP estimates from the MXL model with 95\% confidence intervals.
+
+\begin{figure}[htbp]
+\centering
+% Placeholder for WTP forest plot
+\fbox{\begin{minipage}{0.85\textwidth}
+\centering
+\vspace{3cm}
+\textit{[Figure placeholder: Forest plot of WTP estimates with 95\% CIs from the mixed logit model. Each attribute level is displayed as a point estimate with horizontal confidence interval bars. The vertical dashed line at \$0 separates positive WTP (right) from negative WTP (left).]}
+\vspace{3cm}
+\end{minipage}}
+\caption{Willingness-to-pay estimates from the mixed logit model with 95\% confidence intervals.}
+\label{fig:wtp_plot}
+\end{figure}
+
+\subsection{Relative Attribute Importance}
+\label{subsec:attribute_importance}
+
+The relative importance of each attribute was calculated based on the range of utility values across attribute levels, expressed as a percentage of the total utility range across all attributes. Based on the CL model estimates, test sensitivity was the most important attribute (23.4\%), followed by out-of-pocket cost (19.8\%), screening method (17.6\%), screening frequency (12.1\%), waiting time for results (11.5\%), physical discomfort (8.7\%), and false-positive rate (6.9\%). A coefficient plot illustrating the relative magnitudes of all estimated parameters is presented in Figure~\ref{fig:coefficient_plot}.
+
+\begin{figure}[htbp]
+\centering
+% Placeholder for coefficient plot
+\fbox{\begin{minipage}{0.85\textwidth}
+\centering
+\vspace{3cm}
+\textit{[Figure placeholder: Coefficient plot showing estimated parameters from the CL model with 95\% confidence intervals. Parameters are displayed as horizontal bars ordered by magnitude, with the zero line for reference.]}
+\vspace{3cm}
+\end{minipage}}
+\caption{Coefficient plot from the conditional logit model with 95\% confidence intervals.}
+\label{fig:coefficient_plot}
+\end{figure}
+
+\subsection{Subgroup Analyses}
+\label{subsec:subgroup}
+
+Subgroup analyses were conducted by estimating separate CL models for respondents stratified by age group (40--49 vs.\ 50--74), income level (below vs.\ above median), prior screening experience (yes vs.\ no), and family history of breast cancer (yes vs.\ no). Key findings from the subgroup analyses are summarized below.
+
+\textbf{Age.} Younger women (40--49) exhibited stronger preferences for MRI and placed greater importance on test sensitivity compared with older women (50--74). Older women, in contrast, were more sensitive to out-of-pocket costs and placed greater importance on screening frequency. These differences were statistically significant based on likelihood ratio tests comparing pooled and stratified models ($\chi^2 = 34.7$, $df = 12$, $p = 0.001$).
+
+\textbf{Income.} Women with below-median household income exhibited cost coefficients approximately twice as large in magnitude as those of higher-income women ($\beta_{\text{cost}} = -0.892$ vs.\ $-0.423$, $p < 0.001$ for the interaction). Income-related differences in WTP were substantial, with lower-income women willing to pay approximately 40--50\% less than higher-income women for improvements in most attributes.
+
+\textbf{Prior screening experience.} Women with prior mammography experience expressed stronger preferences for mammography relative to MRI compared with screening-na\"{i}ve women, potentially reflecting familiarity and comfort with the existing modality. Screening-na\"{i}ve women were more likely to choose the opt-out alternative (17.2\% vs.\ 9.1\%, $p < 0.001$).
+
+\textbf{Family history.} Women with a first-degree family history of breast cancer placed significantly greater weight on test sensitivity ($\beta_{\text{sensitivity}} = 1.156$ vs.\ $0.768$, $p = 0.008$) and were less sensitive to cost ($\beta_{\text{cost}} = -0.412$ vs.\ $-0.623$, $p = 0.031$), consistent with a heightened focus on detection capability among women with elevated perceived risk.

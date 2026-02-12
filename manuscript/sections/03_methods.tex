@@ -1,0 +1,254 @@
+\section{Methods}
+\label{sec:methods}
+
+\subsection{Theoretical Framework}
+\label{subsec:theoretical_framework}
+
+This study is grounded in random utility theory (RUT), which provides the theoretical basis for analyzing discrete choice data \citep{mcfadden1974conditional, train2009discrete}. RUT posits that individuals are rational utility maximizers who, when faced with a choice among a set of mutually exclusive alternatives, select the alternative that yields the highest utility. Following Lancaster's characteristics theory of value \citep{lancaster1966new}, we assume that the utility derived from a breast cancer screening program is a function of its constituent attributes rather than the program as a whole.
+
+Formally, the utility that individual $n$ derives from choosing alternative $i$ in choice situation $j$ can be decomposed into a systematic (observable) component $V_{nij}$ and a random (unobservable) component $\varepsilon_{nij}$:
+
+\begin{equation}
+\label{eq:utility}
+U_{nij} = V_{nij} + \varepsilon_{nij}
+\end{equation}
+
+\noindent where the systematic component is specified as a linear-in-parameters function of the attribute levels:
+
+\begin{equation}
+\label{eq:systematic_utility}
+V_{nij} = \boldsymbol{\beta}' \mathbf{x}_{nij}
+\end{equation}
+
+\noindent where $\mathbf{x}_{nij}$ is a vector of attribute levels characterizing alternative $i$ in choice situation $j$ as faced by individual $n$, and $\boldsymbol{\beta}$ is a vector of preference parameters (utility weights) to be estimated. Individual $n$ will choose alternative $i$ over alternative $k$ in choice situation $j$ if and only if $U_{nij} > U_{nkj}$ for all $k \neq i$ in the choice set $C_{nj}$.
+
+The distributional assumption imposed on the random component $\varepsilon_{nij}$ determines the choice model. When $\varepsilon_{nij}$ is assumed to be independently and identically distributed (IID) according to a Type I extreme value (Gumbel) distribution, the conditional logit (CL) model results \citep{mcfadden1974conditional}. Relaxing the IID assumption leads to more flexible model specifications, including the mixed logit and latent class models described in Section~\ref{subsec:econometric_analysis}.
+
+\subsection{Study Design}
+\label{subsec:study_design}
+
+We employed a labeled DCE in which respondents were asked to choose among hypothetical breast cancer screening programs described by seven attributes. The attributes and their levels were selected through a systematic process involving three stages: (1) a comprehensive review of the clinical and DCE literature on breast cancer screening (Section~\ref{sec:literature_review}); (2) consultation with a multidisciplinary expert panel comprising breast radiologists, oncologists, health economists, and patient advocates; and (3) a qualitative pilot study consisting of semi-structured interviews and cognitive debriefing with 20 women from the target population. This process ensured that the final attribute set captured the dimensions of breast cancer screening most relevant to women's decision-making while remaining cognitively manageable within a choice experiment framework.
+
+Table~\ref{tab:attributes_levels} presents the seven attributes, their levels, and the rationale for their inclusion. Categorical attributes (screening method, screening frequency, waiting time for results, and physical discomfort) were effects-coded, while continuous attributes (out-of-pocket cost, sensitivity, and false-positive rate) were entered as continuous variables in the utility function.
+
+\begin{table}[htbp]
+\centering
+\caption{Attributes and Levels Used in the Discrete Choice Experiment}
+\label{tab:attributes_levels}
+\begin{threeparttable}
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{3cm} >{\raggedright\arraybackslash}p{4.5cm} >{\raggedright\arraybackslash}X}
+\toprule
+Attribute & Levels & Rationale \\
+\midrule
+Screening method & Mammography\textsuperscript{a}; MRI; Ultrasound & Reflects current and emerging modalities \citep{lord2007systematic, berg2012detection} \\
+\addlinespace
+Screening frequency & Annual\textsuperscript{a}; Every 2 years; Every 3 years & Spans range of guideline recommendations \citep{USPSTF2024breast, oeffinger2015breast} \\
+\addlinespace
+Out-of-pocket cost & \$0; \$50; \$150; \$300 & Reflects variation in copayments and uninsured costs \citep{trivedi2008effect} \\
+\addlinespace
+Sensitivity (detection rate) & 70\%; 85\%; 95\% & Spans observed sensitivity range across modalities \citep{nelson2009screening, lord2007systematic} \\
+\addlinespace
+False-positive rate & 5\%; 10\%; 15\% & Reflects range of observed false-positive rates \citep{hubbard2011cumulative} \\
+\addlinespace
+Waiting time for results & Same day\textsuperscript{a}; 1 week; 3 weeks & Based on qualitative findings on result anxiety \citep{whelehan2013review} \\
+\addlinespace
+Physical discomfort & None\textsuperscript{a}; Mild; Moderate & Reflects patient-reported screening experiences \citep{nelson2020factors, whelehan2013review} \\
+\bottomrule
+\end{tabularx}
+\begin{tablenotes}
+\small
+\item \textsuperscript{a} Reference level for effects coding. For continuous attributes (cost, sensitivity, false-positive rate), the variable is entered linearly.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
+
+\subsection{Experimental Design}
+\label{subsec:experimental_design}
+
+The full factorial design for the seven attributes with the specified levels comprises $3 \times 3 \times 4 \times 3 \times 3 \times 3 \times 3 = 2{,}916$ possible screening profiles. As presenting all possible pairwise combinations to respondents is infeasible, we employed a D-optimal fractional factorial design to generate a manageable subset of choice tasks that maximizes the statistical efficiency of parameter estimates \citep{street2007construction, rose2009constructing}.
+
+The experimental design was generated using Ngene software (ChoiceMetrics, version 1.3), which employs a modified Fedorov algorithm to identify the design with the minimum D-error \citep{choicemetrics2018ngene}. The design comprised 12 choice tasks, each containing two experimentally designed screening program alternatives and a constant opt-out alternative (``I would choose not to be screened''). The inclusion of an opt-out alternative reflects the reality that women can decline screening and allows for estimation of participation probabilities \citep{lancsar2007estimating, campbell2018including}.
+
+To reduce respondent burden, the 12 choice tasks were blocked into two versions of six choice tasks each, with respondents randomly assigned to one version \citep{louviere2000stated}. The blocking was performed using a design criterion that maintained D-optimality within each block. The final design achieved a D-error of 0.0023, indicating high statistical efficiency. An example choice task is presented in Figure~\ref{fig:example_choice_task}.
+
+\begin{figure}[htbp]
+\centering
+\fbox{
+\begin{minipage}{0.9\textwidth}
+\vspace{0.5em}
+\textbf{Choice Task Example}\\[0.5em]
+Imagine you are deciding which breast cancer screening program to participate in. Please compare the two screening programs described below and indicate which you would prefer. You may also choose not to participate in any screening.\\[1em]
+\begin{tabular}{lccc}
+\toprule
+& \textbf{Program A} & \textbf{Program B} & \textbf{No Screening} \\
+\midrule
+Screening method & MRI & Mammography & --- \\
+Frequency & Every 2 years & Annual & --- \\
+Out-of-pocket cost & \$150 & \$50 & \$0 \\
+Detection rate & 95\% & 85\% & --- \\
+False-positive rate & 10\% & 15\% & --- \\
+Waiting time & 1 week & Same day & --- \\
+Physical discomfort & None & Moderate & --- \\
+\midrule
+\textbf{I would choose:} & $\square$ & $\square$ & $\square$ \\
+\bottomrule
+\end{tabular}
+\vspace{0.5em}
+\end{minipage}
+}
+\caption{Example choice task from the discrete choice experiment.}
+\label{fig:example_choice_task}
+\end{figure}
+
+\subsection{Sample and Recruitment}
+\label{subsec:sample_recruitment}
+
+The target population for this study comprised women aged 40--74 residing in the United States. This age range was selected to align with the age groups for which breast cancer screening is most actively recommended and debated \citep{USPSTF2024breast, oeffinger2015breast}. Inclusion criteria were: (1) female sex; (2) age 40--74 years; (3) no prior diagnosis of breast cancer; (4) ability to read and understand English; and (5) provision of informed consent. Women with a prior breast cancer diagnosis were excluded because their screening preferences may be systematically different from those of the general screening-eligible population and because their choices would reflect treatment-influenced perceptions rather than primary screening considerations.
+
+The minimum sample size was calculated using the formula proposed by \citet{debekerrgrob2015sample}:
+
+\begin{equation}
+\label{eq:sample_size}
+N \geq \frac{500c}{t \times a}
+\end{equation}
+
+\noindent where $N$ is the minimum number of respondents, $c$ is the largest number of levels for any single attribute (4, for out-of-pocket cost), $t$ is the number of choice tasks per respondent (6), and $a$ is the number of alternatives per choice task excluding the opt-out (2). This yields a minimum sample size of $N \geq 500 \times 4 / (6 \times 2) = 167$. To accommodate subgroup analyses, latent class modeling, and potential data quality exclusions, we targeted a sample of 500 completed responses, substantially exceeding the minimum requirement. This target is consistent with sample sizes recommended for mixed logit estimation with multiple random parameters \citep{train2009discrete, orme2010getting}.
+
+Participants were recruited through two channels: (1) an online survey panel (Prolific Academic) and (2) clinic-based recruitment at three breast imaging centers. The dual recruitment strategy was designed to enhance sample diversity and to allow for comparison of preferences between online and clinic-based participants. Online panel participants were recruited using Prolific's demographic pre-screening filters to match the target population. Clinic-based participants were recruited by research assistants who approached women in the waiting areas of participating breast imaging centers.
+
+\subsection{Survey Administration}
+\label{subsec:survey_administration}
+
+The survey was programmed and administered using Qualtrics (Qualtrics, Provo, UT). The survey flow was structured as follows:
+
+\begin{enumerate}
+\item \textbf{Information and consent:} Participants received a study information sheet describing the purpose, procedures, risks, and benefits of participation, followed by an electronic informed consent form.
+
+\item \textbf{Eligibility screening:} A brief set of questions confirmed that participants met the inclusion criteria.
+
+\item \textbf{DCE tutorial:} Participants received an interactive tutorial explaining the choice task format, the attributes and their levels (with definitions and visual aids), and the concept of trading off between attributes. The tutorial was developed following best practices for DCE administration \citep{ryan2001using, coastdce2012}.
+
+\item \textbf{Practice choice task:} Participants completed one practice choice task with feedback to ensure comprehension before proceeding to the experimental tasks.
+
+\item \textbf{Choice tasks:} Participants completed six randomized choice tasks from their assigned design block.
+
+\item \textbf{Follow-up questions:} After completing the choice tasks, participants answered questions about task difficulty, decision strategies, and attribute non-attendance to support data quality assessment.
+
+\item \textbf{Sociodemographic questionnaire:} Participants provided information on age, race/ethnicity, education, household income, health insurance status, prior screening history, family history of breast cancer, and perceived breast cancer risk.
+
+\item \textbf{Debriefing:} Participants received a debriefing statement explaining the study's purpose and providing links to breast cancer screening resources.
+\end{enumerate}
+
+Several data quality measures were implemented. These included an attention check question embedded in the sociodemographic section, a dominance test choice task (in which one alternative was clearly superior on all attributes) to identify respondents who were not engaging meaningfully with the tasks, and minimum completion time thresholds to screen out ``speeders'' \citep{johnson2013constructing}. Respondents who failed the attention check, selected the dominated alternative in the dominance test, or completed the survey in less than one-third of the median completion time were flagged for exclusion from the primary analysis.
+
+\subsection{Econometric Analysis}
+\label{subsec:econometric_analysis}
+
+Choice data were analyzed using three complementary econometric models of increasing flexibility: the conditional logit (CL) model, the mixed logit (MXL) model, and the latent class (LC) model. All models were estimated using maximum likelihood or simulated maximum likelihood methods in R (version 4.3.0) using the \texttt{mlogit} \citep{croissant2020mlogit} and \texttt{gmnl} \citep{sarrias2017gmnl} packages. Stata 18 \citep{statacorp2023stata} was used for robustness checks.
+
+\subsubsection{Conditional Logit Model}
+
+The CL model, also known as the multinomial logit model, assumes that the unobserved components of utility ($\varepsilon_{nij}$) are IID Type I extreme value distributed \citep{mcfadden1974conditional}. Under this assumption, the probability that individual $n$ chooses alternative $i$ from choice set $C_{nj}$ is given by:
+
+\begin{equation}
+\label{eq:cl_probability}
+P_{n}(i \mid C_{nj}) = \frac{\exp(V_{nij})}{\sum_{k \in C_{nj}} \exp(V_{nkj})}
+\end{equation}
+
+The systematic utility function for each screening alternative was specified as:
+
+\begin{equation}
+\label{eq:utility_specification}
+\begin{aligned}
+V_{nij} = \; & \beta_1 \cdot \text{Method}_{\text{MRI}} + \beta_2 \cdot \text{Method}_{\text{US}} + \beta_3 \cdot \text{Freq}_{\text{biennial}} + \beta_4 \cdot \text{Freq}_{\text{triennial}} \\
+& + \beta_5 \cdot \text{Cost} + \beta_6 \cdot \text{Sensitivity} + \beta_7 \cdot \text{FPR} \\
+& + \beta_8 \cdot \text{Wait}_{\text{1 week}} + \beta_9 \cdot \text{Wait}_{\text{3 weeks}} \\
+& + \beta_{10} \cdot \text{Pain}_{\text{mild}} + \beta_{11} \cdot \text{Pain}_{\text{moderate}} + \beta_{\text{opt-out}} \cdot \text{OptOut}
+\end{aligned}
+\end{equation}
+
+\noindent where the reference levels for effects-coded attributes are mammography (method), annual (frequency), same day (waiting time), and none (physical discomfort). The cost attribute was entered in units of \$100, the sensitivity attribute in units of 10 percentage points, and the false-positive rate in units of 5 percentage points to facilitate interpretation. The opt-out alternative was captured by an alternative-specific constant ($\beta_{\text{opt-out}}$) that takes the value 1 for the ``no screening'' alternative and 0 otherwise.
+
+The CL model was estimated by maximizing the log-likelihood function:
+
+\begin{equation}
+\label{eq:cl_loglikelihood}
+\mathcal{LL}(\boldsymbol{\beta}) = \sum_{n=1}^{N} \sum_{j=1}^{J} \sum_{i \in C_{nj}} y_{nij} \ln P_{n}(i \mid C_{nj})
+\end{equation}
+
+\noindent where $y_{nij} = 1$ if individual $n$ chose alternative $i$ in choice situation $j$, and $y_{nij} = 0$ otherwise.
+
+While the CL model provides consistent and efficient estimates under its maintained assumptions, it imposes two restrictive properties: taste homogeneity (all individuals share the same preference parameters $\boldsymbol{\beta}$) and the independence of irrelevant alternatives (IIA), which requires that the ratio of choice probabilities for any two alternatives be independent of the attributes of other alternatives in the choice set \citep{hausman1984specification, train2009discrete}. These restrictions motivate the estimation of more flexible models.
+
+\subsubsection{Mixed Logit Model}
+
+The MXL model, also known as the random parameters logit model, relaxes both the taste homogeneity and IIA assumptions by allowing preference parameters to vary randomly across individuals \citep{train2009discrete, hensher2015applied}. Each individual $n$ is assumed to have a unique vector of preference parameters $\boldsymbol{\beta}_n$ drawn from a continuous mixing distribution $f(\boldsymbol{\beta} \mid \boldsymbol{\theta})$, where $\boldsymbol{\theta}$ denotes the distributional parameters (e.g., mean and variance for normally distributed parameters).
+
+The unconditional choice probability in the MXL model is obtained by integrating the CL probability over the distribution of $\boldsymbol{\beta}$:
+
+\begin{equation}
+\label{eq:mxl_probability}
+P_{n}(i \mid C_{nj}) = \int \frac{\exp(\boldsymbol{\beta}_n' \mathbf{x}_{nij})}{\sum_{k \in C_{nj}} \exp(\boldsymbol{\beta}_n' \mathbf{x}_{nkj})} f(\boldsymbol{\beta} \mid \boldsymbol{\theta}) \, d\boldsymbol{\beta}
+\end{equation}
+
+This integral does not have a closed-form solution and is approximated using simulated maximum likelihood estimation with $R = 1{,}000$ Halton draws per individual to ensure stable estimation \citep{train2009discrete, bhat2001quasi}. The simulated log-likelihood function is:
+
+\begin{equation}
+\label{eq:mxl_simulated_ll}
+\mathcal{SLL}(\boldsymbol{\theta}) = \sum_{n=1}^{N} \ln \left[ \frac{1}{R} \sum_{r=1}^{R} \prod_{j=1}^{J} \frac{\exp(\boldsymbol{\beta}_n^{(r)\prime} \mathbf{x}_{nij})}{\sum_{k \in C_{nj}} \exp(\boldsymbol{\beta}_n^{(r)\prime} \mathbf{x}_{nkj})} \right]
+\end{equation}
+
+All non-cost parameters were specified as random with normal distributions to allow for the possibility that preferences for screening attributes may be both positive and negative across the population. The cost parameter was held fixed (non-random) to ensure that the distribution of WTP estimates is well-defined and bounded, following the recommendation of \citet{hole2008modelling} and \citet{train2009discrete}. Specifically, when the cost coefficient is fixed, the WTP for each attribute is distributed normally if the attribute coefficient is normally distributed, facilitating straightforward interpretation.
+
+We tested alternative distributional assumptions including lognormal (for parameters expected to have a definite sign, such as sensitivity) and triangular distributions, with model selection guided by the Bayesian Information Criterion (BIC) and substantive interpretability.
+
+\subsubsection{Latent Class Model}
+
+The LC model provides an alternative approach to capturing preference heterogeneity by assuming that the population consists of a finite number of $S$ latent classes (segments), each characterized by a distinct set of preference parameters \citep{greene2003latent, boxall2002latent}. Unlike the MXL model, which assumes continuously distributed heterogeneity, the LC model posits discrete heterogeneity, allowing for the identification of distinct preference profiles that may correspond to meaningful population subgroups.
+
+The probability that individual $n$ chooses alternative $i$ in the LC model is a weighted average of class-specific CL probabilities:
+
+\begin{equation}
+\label{eq:lc_probability}
+P_{n}(i \mid C_{nj}) = \sum_{s=1}^{S} \pi_{ns} \cdot \frac{\exp(\boldsymbol{\beta}_s' \mathbf{x}_{nij})}{\sum_{k \in C_{nj}} \exp(\boldsymbol{\beta}_s' \mathbf{x}_{nkj})}
+\end{equation}
+
+\noindent where $\boldsymbol{\beta}_s$ is the vector of preference parameters for class $s$, and $\pi_{ns}$ is the probability that individual $n$ belongs to class $s$, which sums to unity across classes. Class membership probabilities are modeled as a function of individual characteristics using a multinomial logit specification:
+
+\begin{equation}
+\label{eq:class_membership}
+\pi_{ns} = \frac{\exp(\boldsymbol{\gamma}_s' \mathbf{z}_n)}{\sum_{r=1}^{S} \exp(\boldsymbol{\gamma}_r' \mathbf{z}_n)}
+\end{equation}
+
+\noindent where $\mathbf{z}_n$ is a vector of individual-specific covariates (e.g., age, income, education, screening history) and $\boldsymbol{\gamma}_s$ is the corresponding vector of class membership parameters, with $\boldsymbol{\gamma}_S = \mathbf{0}$ for identification.
+
+The optimal number of latent classes was determined by estimating models with $S = 2, 3, 4, 5$ classes and comparing model fit using the BIC:
+
+\begin{equation}
+\label{eq:bic}
+\text{BIC} = -2 \mathcal{LL} + K \ln(N)
+\end{equation}
+
+\noindent where $\mathcal{LL}$ is the maximized log-likelihood, $K$ is the number of estimated parameters, and $N$ is the number of respondents. The model with the lowest BIC was selected as the preferred specification, with consideration also given to the Akaike Information Criterion (AIC), the consistent AIC (CAIC), and substantive interpretability of the resulting classes \citep{nylund2007deciding}.
+
+\subsubsection{Willingness-to-Pay Estimation}
+
+WTP estimates for each non-cost attribute were calculated as the negative ratio of the attribute coefficient to the cost coefficient:
+
+\begin{equation}
+\label{eq:wtp}
+\text{WTP}_{\text{attribute}} = -\frac{\beta_{\text{attribute}}}{\beta_{\text{cost}}}
+\end{equation}
+
+This ratio represents the marginal rate of substitution between the attribute and cost, interpreted as the maximum amount an individual would be willing to pay for a one-unit improvement in the attribute (or for a move from the reference level to the specified level for effects-coded attributes), all else equal.
+
+Confidence intervals for WTP estimates were calculated using the Krinsky-Robb parametric bootstrapping method \citep{krinsky1986approximating}, which involves drawing 10,000 replications from the asymptotic multivariate normal distribution of the estimated parameters and computing the WTP ratio for each draw. The 2.5th and 97.5th percentiles of the resulting WTP distribution were used to construct 95\% confidence intervals. We also computed WTP confidence intervals using the delta method for comparison \citep{hole2007fitting}.
+
+In the MXL model, where attribute coefficients are randomly distributed, the WTP for each attribute follows a derived distribution. Because the cost coefficient was held fixed, the WTP distribution mirrors the distribution of the attribute coefficient. We report the mean WTP and the standard deviation of the WTP distribution.
+
+In the LC model, class-specific WTP estimates were calculated by applying Equation~\eqref{eq:wtp} separately within each class, yielding a set of WTP values that characterize the distinct preference profiles of each latent segment.
+
+\subsection{Ethical Considerations}
+\label{subsec:ethics}
+
+This study was approved by the Institutional Review Board (IRB) of [University Name] (Protocol No. [to be inserted]). All participants provided written informed consent prior to participation. The study was conducted in accordance with the principles of the Declaration of Helsinki and applicable data protection regulations. All survey data were collected anonymously, with no personally identifiable information linked to choice responses. Participants were informed that their participation was voluntary and that they could withdraw at any time without penalty. Online participants recruited through Prolific were compensated at a rate of \$10.00 per hour for their time, consistent with the platform's fair payment guidelines. Clinic-based participants received a \$15 gift card upon completion of the survey.

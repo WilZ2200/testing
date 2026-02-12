@@ -1,0 +1,24 @@
+\begin{table}[htbp]
+\centering
+\caption{Model Comparison}
+\label{tab:model_comparison}
+\begin{tabular}{lrrrrr}
+\toprule
+Model & LL & $K$ & AIC & BIC & Pseudo-$R^2$ \\
+\midrule
+Conditional Logit & -5719.81 & 12 & 11463.61 & 11544.01 & 0.1323 \\
+Mixed Logit & -4787.87 & 22 & 9619.74 & 9767.13 & 0.2736 \\
+LC-2 & -4893.47 & 25 & 9836.94 & 9942.30 & 0.2576 \\
+LC-3 & -4751.43 & 38 & 9578.86 & 9739.01 & 0.2792 \\
+LC-4 & -4734.33 & 51 & 9570.65 & 9785.60 & 0.2818 \\
+LC-5 & -4731.16 & 64 & 9590.32 & 9860.06 & 0.2823 \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}
+\small
+\item Note: LL = log-likelihood; $K$ = number of parameters;
+\item AIC = Akaike Information Criterion; BIC = Bayesian Information Criterion.
+\item Pseudo-$R^2$ = McFadden's $R^2 = 1 - LL/LL_0$.
+\end{tablenotes}
+\end{table}
+

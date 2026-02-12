@@ -1,0 +1,36 @@
+\begin{table}[htbp]
+\centering
+\caption{Latent Class Model Results (3 Classes)}
+\label{tab:lc_results}
+\begin{tabular}{lrrr}
+\toprule
+ & Class 1 (33.3\%) & Class 2 (51.5\%) & Class 3 (15.2\%) \\
+\midrule
+MRI vs.\ Mammography & 0.2692 & 0.6050 & -0.2121 \\
+Ultrasound vs.\ Mammography & -0.3559 & -0.0847 & -0.0616 \\
+Biennial vs.\ Annual & -0.1470 & -0.1901 & 0.0622 \\
+Triennial vs.\ Annual & -0.4940 & -0.3588 & -0.5003 \\
+Cost (per \$1) & -0.0100 & -0.0038 & -0.0088 \\
+Sensitivity (per 1 pp) & 0.0259 & 0.0728 & -0.0042 \\
+False positive rate (per 1 pp) & -0.0329 & -0.0769 & -0.0311 \\
+1 week vs.\ 1 day wait & -0.2445 & -0.8040 & -0.3535 \\
+3 weeks vs.\ 1 day wait & -1.0089 & -0.4703 & -0.7324 \\
+Mild vs.\ None & -0.3532 & -0.4836 & 0.1464 \\
+Moderate vs.\ None & -0.7815 & -0.7300 & -0.2793 \\
+Opt-out (no screening) & -0.4619 & 0.2165 & -0.4038 \\
+\midrule
+Class share (\%) & 33.3 & 51.5 & 15.2 \\
+\midrule
+Log-likelihood & \multicolumn{3}{c}{-4751.43} \\
+AIC & \multicolumn{3}{c}{9578.86} \\
+BIC & \multicolumn{3}{c}{9739.01} \\
+McFadden $R^2$ & \multicolumn{3}{c}{0.2792} \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}
+\small
+\item Note: Class-specific coefficients estimated via EM algorithm with
+\item class-specific conditional logit models.
+\end{tablenotes}
+\end{table}
+

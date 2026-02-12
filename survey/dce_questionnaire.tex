@@ -1,0 +1,940 @@
+\documentclass[12pt,letterpaper]{article}
+
+% Packages
+\usepackage[margin=1in]{geometry}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{tabularx}
+\usepackage{longtable}
+\usepackage{tikz}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{hyperref}
+\usepackage{amssymb}
+
+% Page style
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small Breast Cancer Screening Preferences Study}
+\fancyhead[R]{\small Participant ID: \_\_\_\_\_\_\_\_}
+\fancyfoot[C]{\small Page \thepage\ of \pageref{LastPage}}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+% Custom colors
+\definecolor{headerblue}{RGB}{41,65,122}
+\definecolor{lightgray}{RGB}{240,240,240}
+\definecolor{optionA}{RGB}{52,101,164}
+\definecolor{optionB}{RGB}{164,52,52}
+
+% Custom commands
+\newcommand{\sectionheader}[1]{%
+  \noindent\colorbox{headerblue}{\parbox{\dimexpr\textwidth-2\fboxsep}{%
+    \centering\color{white}\bfseries\large #1}}%
+  \vspace{0.3cm}%
+}
+
+\newcommand{\choicebox}[1]{\framebox[1.2cm]{\rule{0pt}{0.4cm}#1}}
+
+\begin{document}
+
+% Title Page
+\begin{titlepage}
+\centering
+\vspace*{2cm}
+{\Huge\bfseries\color{headerblue} Breast Cancer Screening\\[0.3cm] Preferences Study\par}
+\vspace{1.5cm}
+{\Large A Discrete Choice Experiment\par}
+\vspace{2cm}
+{\large Department of Health Economics and Outcomes Research\par}
+\vspace{0.5cm}
+{\large [University Name]\par}
+\vspace{2cm}
+
+\begin{tabular}{ll}
+\textbf{Principal Investigator:} & [PI Name] \\
+\textbf{Study Protocol:}        & DCE-BCS-2026-001 \\
+\textbf{Version:}               & 1.0 \\
+\textbf{Date:}                  & February 2026 \\
+\textbf{IRB Approval:}          & [Pending] \\
+\end{tabular}
+
+\vspace{2cm}
+{\small\textit{This survey is anonymous and voluntary. Your responses will help researchers understand women's preferences for breast cancer screening programs. The survey takes approximately 20--25 minutes to complete.}\par}
+
+\vfill
+{\footnotesize Funded by [Funding Source]. Protocol approved by [IRB Name].}
+\end{titlepage}
+
+% Instructions page
+\newpage
+\sectionheader{General Instructions}
+
+Thank you for agreeing to participate in this study about breast cancer screening preferences.
+
+\begin{itemize}[leftmargin=*]
+  \item This survey asks about your preferences for different breast cancer screening options.
+  \item There are \textbf{no right or wrong answers}---we are interested in your personal preferences.
+  \item You will be shown pairs of hypothetical screening programs and asked to choose the one you prefer, or to opt out of both.
+  \item Please read each question carefully and answer as honestly as possible.
+  \item If you are unsure about a medical term, brief explanations are provided.
+  \item The survey has four parts:
+  \begin{enumerate}
+    \item Screening background and eligibility (5 minutes)
+    \item Choice tasks---comparing screening programs (10--12 minutes)
+    \item Sociodemographic questions (3--5 minutes)
+    \item Debriefing (2 minutes)
+  \end{enumerate}
+\end{itemize}
+
+\vspace{0.5cm}
+\noindent\fbox{\parbox{\textwidth}{%
+\textbf{Key Definitions:}
+\begin{description}[leftmargin=1cm,style=nextline]
+  \item[Mammography] An X-ray of the breast used to detect tumors or abnormalities.
+  \item[MRI (Magnetic Resonance Imaging)] Uses magnets and radio waves to produce detailed breast images. No radiation involved.
+  \item[Ultrasound] Uses sound waves to produce images of breast tissue. Often used as a supplement to mammography.
+  \item[Sensitivity] The probability that a screening test correctly identifies cancer when it is present (detection rate).
+  \item[False positive rate] The probability that a screening test incorrectly indicates cancer when none is present, leading to unnecessary follow-up.
+\end{description}
+}}
+
+%% ============================================================
+%% PART A: SCREENING INFORMATION AND ELIGIBILITY
+%% ============================================================
+\newpage
+\sectionheader{Part A: Screening Background and Eligibility}
+
+\noindent Please answer the following questions about yourself and your experience with breast cancer screening.
+
+\vspace{0.5cm}
+
+\textbf{A1. What is your age?}\\[0.2cm]
+\_\_\_\_\_\_ years
+
+\vspace{0.4cm}
+\textbf{A2. What is your sex assigned at birth?}
+\begin{itemize}[label=$\square$]
+  \item Female
+  \item Male
+  \item Prefer not to answer
+\end{itemize}
+
+\vspace{0.4cm}
+\textbf{A3. Have you ever had a breast cancer screening test (e.g., mammogram, breast MRI, or clinical breast exam)?}
+\begin{itemize}[label=$\square$]
+  \item Yes
+  \item No $\rightarrow$ \textit{Skip to A6}
+  \item Unsure
+\end{itemize}
+
+\vspace{0.4cm}
+\textbf{A4. If yes, which types of screening have you had? (Select all that apply)}
+\begin{itemize}[label=$\square$]
+  \item Mammography
+  \item Breast MRI
+  \item Breast ultrasound
+  \item Clinical breast exam (by a healthcare provider)
+  \item Other: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+\end{itemize}
+
+\vspace{0.4cm}
+\textbf{A5. When was your most recent breast cancer screening?}
+\begin{itemize}[label=$\square$]
+  \item Within the past 12 months
+  \item 1--2 years ago
+  \item 3--5 years ago
+  \item More than 5 years ago
+  \item Don't remember
+\end{itemize}
+
+\vspace{0.4cm}
+\textbf{A6. Have you ever been diagnosed with breast cancer?}
+\begin{itemize}[label=$\square$]
+  \item Yes
+  \item No
+  \item Prefer not to answer
+\end{itemize}
+
+\vspace{0.4cm}
+\textbf{A7. Has any first-degree relative (mother, sister, daughter) been diagnosed with breast cancer?}
+\begin{itemize}[label=$\square$]
+  \item Yes
+  \item No
+  \item Unsure
+  \item Prefer not to answer
+\end{itemize}
+
+\vspace{0.4cm}
+\textbf{A8. Has any second-degree relative (grandmother, aunt, niece) been diagnosed with breast cancer?}
+\begin{itemize}[label=$\square$]
+  \item Yes
+  \item No
+  \item Unsure
+  \item Prefer not to answer
+\end{itemize}
+
+\vspace{0.4cm}
+\textbf{A9. Have you ever been told by a healthcare provider that you are at higher-than-average risk for breast cancer?}
+\begin{itemize}[label=$\square$]
+  \item Yes
+  \item No
+  \item Unsure
+\end{itemize}
+
+\vspace{0.4cm}
+\textbf{A10. Have you ever had a false positive result from a breast cancer screening test (i.e., the test suggested cancer but further testing showed no cancer)?}
+\begin{itemize}[label=$\square$]
+  \item Yes
+  \item No
+  \item Unsure
+  \item Not applicable (never screened)
+\end{itemize}
+
+
+%% ============================================================
+%% PART B: DCE CHOICE TASKS
+%% ============================================================
+\newpage
+\sectionheader{Part B: Choice Tasks}
+
+\noindent In this section, you will be presented with 12 choice scenarios. Each scenario shows two hypothetical breast cancer screening programs (\textbf{Program A} and \textbf{Program B}) that differ on several characteristics. For each scenario, please choose the program you would prefer, or indicate that you would \textbf{not choose either program}.
+
+\vspace{0.3cm}
+\noindent Each program is described by the following characteristics:
+
+\vspace{0.3cm}
+\begin{tabularx}{\textwidth}{lX}
+\toprule
+\textbf{Characteristic} & \textbf{Description} \\
+\midrule
+Screening method & The type of technology used (Mammography, MRI, or Ultrasound) \\
+Screening frequency & How often you would be screened \\
+Out-of-pocket cost & Your personal cost per screening visit (after insurance) \\
+Sensitivity & The chance the test correctly detects cancer if present \\
+False positive rate & The chance the test says cancer is present when it is not \\
+Waiting time for results & How long until you receive your results \\
+Pain/discomfort & The level of physical discomfort during the screening \\
+\bottomrule
+\end{tabularx}
+
+\vspace{0.5cm}
+
+% EXAMPLE CHOICE TASK
+\noindent\fbox{\parbox{\textwidth}{%
+\begin{center}
+\textbf{\large EXAMPLE CHOICE TASK (Practice)}
+\end{center}
+
+\vspace{0.3cm}
+\noindent Imagine you need to choose a breast cancer screening program. Compare the two programs below and select the one you prefer, or choose ``Neither.''
+
+\vspace{0.3cm}
+\begin{center}
+\begin{tabular}{>{\bfseries}l|c|c}
+\toprule
+\textbf{Characteristic} & \textcolor{optionA}{\textbf{Program A}} & \textcolor{optionB}{\textbf{Program B}} \\
+\midrule
+Screening method       & Mammography    & MRI \\
+Screening frequency    & Every 2 years  & Every year \\
+Out-of-pocket cost     & \$50 per visit & \$300 per visit \\
+Sensitivity            & 85\%           & 95\% \\
+False positive rate    & 10\%           & 5\% \\
+Waiting time           & 1 week         & 1 day \\
+Pain/discomfort        & Moderate       & None \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\vspace{0.3cm}
+\begin{center}
+\choicebox{} \textcolor{optionA}{\textbf{I prefer Program A}} \hspace{1cm}
+\choicebox{} \textcolor{optionB}{\textbf{I prefer Program B}} \hspace{1cm}
+\choicebox{} \textbf{I would choose neither program}
+\end{center}
+
+\vspace{0.3cm}
+\noindent\textit{In this example, Program A is less expensive with moderate discomfort, while Program B has higher detection, faster results, and no discomfort but costs more. There is no right answer---choose based on your own preferences.}
+}}
+
+\vspace{0.8cm}
+\noindent\textbf{Please now complete the 12 choice tasks on the following pages.}
+
+% ---- CHOICE SET 1 ----
+\newpage
+\begin{center}
+{\Large\textbf{Choice Task 1 of 12}}
+\end{center}
+\vspace{0.3cm}
+\noindent Please compare the two screening programs and choose the one you prefer, or select ``Neither.''
+
+\vspace{0.4cm}
+\begin{center}
+\begin{tabular}{>{\bfseries}l|c|c}
+\toprule
+\textbf{Characteristic} & \textcolor{optionA}{\textbf{Program A}} & \textcolor{optionB}{\textbf{Program B}} \\
+\midrule
+Screening method       & Mammography    & Ultrasound \\
+Screening frequency    & Every year     & Every 3 years \\
+Out-of-pocket cost     & \$150          & \$0 \\
+Sensitivity            & 85\%           & 70\% \\
+False positive rate    & 10\%           & 5\% \\
+Waiting time           & 1 week         & 1 day \\
+Pain/discomfort        & Moderate       & None \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\vspace{0.4cm}
+\begin{center}
+\choicebox{} \textcolor{optionA}{\textbf{Program A}} \hspace{1.5cm}
+\choicebox{} \textcolor{optionB}{\textbf{Program B}} \hspace{1.5cm}
+\choicebox{} \textbf{Neither program}
+\end{center}
+
+\vspace{1.5cm}
+
+% ---- CHOICE SET 2 ----
+\begin{center}
+{\Large\textbf{Choice Task 2 of 12}}
+\end{center}
+\vspace{0.3cm}
+\noindent Please compare the two screening programs and choose the one you prefer, or select ``Neither.''
+
+\vspace{0.4cm}
+\begin{center}
+\begin{tabular}{>{\bfseries}l|c|c}
+\toprule
+\textbf{Characteristic} & \textcolor{optionA}{\textbf{Program A}} & \textcolor{optionB}{\textbf{Program B}} \\
+\midrule
+Screening method       & MRI            & Mammography \\
+Screening frequency    & Every 2 years  & Every year \\
+Out-of-pocket cost     & \$300          & \$50 \\
+Sensitivity            & 95\%           & 85\% \\
+False positive rate    & 15\%           & 10\% \\
+Waiting time           & 3 weeks        & 1 week \\
+Pain/discomfort        & None           & Mild \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\vspace{0.4cm}
+\begin{center}
+\choicebox{} \textcolor{optionA}{\textbf{Program A}} \hspace{1.5cm}
+\choicebox{} \textcolor{optionB}{\textbf{Program B}} \hspace{1.5cm}
+\choicebox{} \textbf{Neither program}
+\end{center}
+
+% ---- CHOICE SET 3 ----
+\newpage
+\begin{center}
+{\Large\textbf{Choice Task 3 of 12}}
+\end{center}
+\vspace{0.3cm}
+\noindent Please compare the two screening programs and choose the one you prefer, or select ``Neither.''
+
+\vspace{0.4cm}
+\begin{center}
+\begin{tabular}{>{\bfseries}l|c|c}
+\toprule
+\textbf{Characteristic} & \textcolor{optionA}{\textbf{Program A}} & \textcolor{optionB}{\textbf{Program B}} \\
+\midrule
+Screening method       & Ultrasound     & MRI \\
+Screening frequency    & Every 3 years  & Every 2 years \\
+Out-of-pocket cost     & \$50           & \$150 \\
+Sensitivity            & 70\%           & 95\% \\
+False positive rate    & 5\%            & 15\% \\
+Waiting time           & 1 day          & 1 week \\
+Pain/discomfort        & Mild           & None \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\vspace{0.4cm}
+\begin{center}
+\choicebox{} \textcolor{optionA}{\textbf{Program A}} \hspace{1.5cm}
+\choicebox{} \textcolor{optionB}{\textbf{Program B}} \hspace{1.5cm}
+\choicebox{} \textbf{Neither program}
+\end{center}
+
+\vspace{1.5cm}
+
+% ---- CHOICE SET 4 ----
+\begin{center}
+{\Large\textbf{Choice Task 4 of 12}}
+\end{center}
+\vspace{0.3cm}
+\noindent Please compare the two screening programs and choose the one you prefer, or select ``Neither.''
+
+\vspace{0.4cm}
+\begin{center}
+\begin{tabular}{>{\bfseries}l|c|c}
+\toprule
+\textbf{Characteristic} & \textcolor{optionA}{\textbf{Program A}} & \textcolor{optionB}{\textbf{Program B}} \\
+\midrule
+Screening method       & Mammography    & MRI \\
+Screening frequency    & Every 3 years  & Every year \\
+Out-of-pocket cost     & \$0            & \$300 \\
+Sensitivity            & 70\%           & 95\% \\
+False positive rate    & 15\%           & 5\% \\
+Waiting time           & 3 weeks        & 1 day \\
+Pain/discomfort        & Moderate       & None \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\vspace{0.4cm}
+\begin{center}
+\choicebox{} \textcolor{optionA}{\textbf{Program A}} \hspace{1.5cm}
+\choicebox{} \textcolor{optionB}{\textbf{Program B}} \hspace{1.5cm}
+\choicebox{} \textbf{Neither program}
+\end{center}
+
+% ---- CHOICE SET 5 ----
+\newpage
+\begin{center}
+{\Large\textbf{Choice Task 5 of 12}}
+\end{center}
+\vspace{0.3cm}
+\noindent Please compare the two screening programs and choose the one you prefer, or select ``Neither.''
+
+\vspace{0.4cm}
+\begin{center}
+\begin{tabular}{>{\bfseries}l|c|c}
+\toprule
+\textbf{Characteristic} & \textcolor{optionA}{\textbf{Program A}} & \textcolor{optionB}{\textbf{Program B}} \\
+\midrule
+Screening method       & MRI            & Ultrasound \\
+Screening frequency    & Every year     & Every 2 years \\
+Out-of-pocket cost     & \$150          & \$50 \\
+Sensitivity            & 85\%           & 70\% \\
+False positive rate    & 5\%            & 15\% \\
+Waiting time           & 1 week         & 3 weeks \\
+Pain/discomfort        & Mild           & Moderate \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\vspace{0.4cm}
+\begin{center}
+\choicebox{} \textcolor{optionA}{\textbf{Program A}} \hspace{1.5cm}
+\choicebox{} \textcolor{optionB}{\textbf{Program B}} \hspace{1.5cm}
+\choicebox{} \textbf{Neither program}
+\end{center}
+
+\vspace{1.5cm}
+
+% ---- CHOICE SET 6 ----
+\begin{center}
+{\Large\textbf{Choice Task 6 of 12}}
+\end{center}
+\vspace{0.3cm}
+\noindent Please compare the two screening programs and choose the one you prefer, or select ``Neither.''
+
+\vspace{0.4cm}
+\begin{center}
+\begin{tabular}{>{\bfseries}l|c|c}
+\toprule
+\textbf{Characteristic} & \textcolor{optionA}{\textbf{Program A}} & \textcolor{optionB}{\textbf{Program B}} \\
+\midrule
+Screening method       & Ultrasound     & Mammography \\
+Screening frequency    & Every year     & Every 3 years \\
+Out-of-pocket cost     & \$300          & \$0 \\
+Sensitivity            & 95\%           & 70\% \\
+False positive rate    & 10\%           & 5\% \\
+Waiting time           & 1 day          & 3 weeks \\
+Pain/discomfort        & None           & Moderate \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\vspace{0.4cm}
+\begin{center}
+\choicebox{} \textcolor{optionA}{\textbf{Program A}} \hspace{1.5cm}
+\choicebox{} \textcolor{optionB}{\textbf{Program B}} \hspace{1.5cm}
+\choicebox{} \textbf{Neither program}
+\end{center}
+
+% ---- CHOICE SET 7 ----
+\newpage
+\begin{center}
+{\Large\textbf{Choice Task 7 of 12}}
+\end{center}
+\vspace{0.3cm}
+\noindent Please compare the two screening programs and choose the one you prefer, or select ``Neither.''
+
+\vspace{0.4cm}
+\begin{center}
+\begin{tabular}{>{\bfseries}l|c|c}
+\toprule
+\textbf{Characteristic} & \textcolor{optionA}{\textbf{Program A}} & \textcolor{optionB}{\textbf{Program B}} \\
+\midrule
+Screening method       & Mammography    & Ultrasound \\
+Screening frequency    & Every 2 years  & Every year \\
+Out-of-pocket cost     & \$50           & \$150 \\
+Sensitivity            & 95\%           & 85\% \\
+False positive rate    & 15\%           & 10\% \\
+Waiting time           & 3 weeks        & 1 day \\
+Pain/discomfort        & Mild           & None \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\vspace{0.4cm}
+\begin{center}
+\choicebox{} \textcolor{optionA}{\textbf{Program A}} \hspace{1.5cm}
+\choicebox{} \textcolor{optionB}{\textbf{Program B}} \hspace{1.5cm}
+\choicebox{} \textbf{Neither program}
+\end{center}
+
+\vspace{1.5cm}
+
+% ---- CHOICE SET 8 ---- (Dominance test)
+\begin{center}
+{\Large\textbf{Choice Task 8 of 12}}
+\end{center}
+\vspace{0.3cm}
+\noindent Please compare the two screening programs and choose the one you prefer, or select ``Neither.''
+
+\vspace{0.4cm}
+\begin{center}
+\begin{tabular}{>{\bfseries}l|c|c}
+\toprule
+\textbf{Characteristic} & \textcolor{optionA}{\textbf{Program A}} & \textcolor{optionB}{\textbf{Program B}} \\
+\midrule
+Screening method       & MRI            & Mammography \\
+Screening frequency    & Every year     & Every 3 years \\
+Out-of-pocket cost     & \$0            & \$300 \\
+Sensitivity            & 95\%           & 70\% \\
+False positive rate    & 5\%            & 15\% \\
+Waiting time           & 1 day          & 3 weeks \\
+Pain/discomfort        & None           & Moderate \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\vspace{0.4cm}
+\begin{center}
+\choicebox{} \textcolor{optionA}{\textbf{Program A}} \hspace{1.5cm}
+\choicebox{} \textcolor{optionB}{\textbf{Program B}} \hspace{1.5cm}
+\choicebox{} \textbf{Neither program}
+\end{center}
+
+{\small\textit{Note: Choice task 8 is a dominance test for data quality verification.}}
+
+% ---- CHOICE SET 9 ----
+\newpage
+\begin{center}
+{\Large\textbf{Choice Task 9 of 12}}
+\end{center}
+\vspace{0.3cm}
+\noindent Please compare the two screening programs and choose the one you prefer, or select ``Neither.''
+
+\vspace{0.4cm}
+\begin{center}
+\begin{tabular}{>{\bfseries}l|c|c}
+\toprule
+\textbf{Characteristic} & \textcolor{optionA}{\textbf{Program A}} & \textcolor{optionB}{\textbf{Program B}} \\
+\midrule
+Screening method       & Ultrasound     & MRI \\
+Screening frequency    & Every 2 years  & Every 3 years \\
+Out-of-pocket cost     & \$0            & \$50 \\
+Sensitivity            & 85\%           & 70\% \\
+False positive rate    & 10\%           & 5\% \\
+Waiting time           & 1 week         & 1 day \\
+Pain/discomfort        & Moderate       & Mild \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\vspace{0.4cm}
+\begin{center}
+\choicebox{} \textcolor{optionA}{\textbf{Program A}} \hspace{1.5cm}
+\choicebox{} \textcolor{optionB}{\textbf{Program B}} \hspace{1.5cm}
+\choicebox{} \textbf{Neither program}
+\end{center}
+
+\vspace{1.5cm}
+
+% ---- CHOICE SET 10 ----
+\begin{center}
+{\Large\textbf{Choice Task 10 of 12}}
+\end{center}
+\vspace{0.3cm}
+\noindent Please compare the two screening programs and choose the one you prefer, or select ``Neither.''
+
+\vspace{0.4cm}
+\begin{center}
+\begin{tabular}{>{\bfseries}l|c|c}
+\toprule
+\textbf{Characteristic} & \textcolor{optionA}{\textbf{Program A}} & \textcolor{optionB}{\textbf{Program B}} \\
+\midrule
+Screening method       & MRI            & Mammography \\
+Screening frequency    & Every 3 years  & Every 2 years \\
+Out-of-pocket cost     & \$150          & \$300 \\
+Sensitivity            & 70\%           & 95\% \\
+False positive rate    & 10\%           & 15\% \\
+Waiting time           & 1 day          & 1 week \\
+Pain/discomfort        & Moderate       & Mild \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\vspace{0.4cm}
+\begin{center}
+\choicebox{} \textcolor{optionA}{\textbf{Program A}} \hspace{1.5cm}
+\choicebox{} \textcolor{optionB}{\textbf{Program B}} \hspace{1.5cm}
+\choicebox{} \textbf{Neither program}
+\end{center}
+
+% ---- CHOICE SET 11 ----
+\newpage
+\begin{center}
+{\Large\textbf{Choice Task 11 of 12}}
+\end{center}
+\vspace{0.3cm}
+\noindent Please compare the two screening programs and choose the one you prefer, or select ``Neither.''
+
+\vspace{0.4cm}
+\begin{center}
+\begin{tabular}{>{\bfseries}l|c|c}
+\toprule
+\textbf{Characteristic} & \textcolor{optionA}{\textbf{Program A}} & \textcolor{optionB}{\textbf{Program B}} \\
+\midrule
+Screening method       & Mammography    & MRI \\
+Screening frequency    & Every year     & Every 2 years \\
+Out-of-pocket cost     & \$300          & \$0 \\
+Sensitivity            & 85\%           & 95\% \\
+False positive rate    & 5\%            & 10\% \\
+Waiting time           & 1 week         & 3 weeks \\
+Pain/discomfort        & None           & Moderate \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\vspace{0.4cm}
+\begin{center}
+\choicebox{} \textcolor{optionA}{\textbf{Program A}} \hspace{1.5cm}
+\choicebox{} \textcolor{optionB}{\textbf{Program B}} \hspace{1.5cm}
+\choicebox{} \textbf{Neither program}
+\end{center}
+
+\vspace{1.5cm}
+
+% ---- CHOICE SET 12 ----
+\begin{center}
+{\Large\textbf{Choice Task 12 of 12}}
+\end{center}
+\vspace{0.3cm}
+\noindent Please compare the two screening programs and choose the one you prefer, or select ``Neither.''
+
+\vspace{0.4cm}
+\begin{center}
+\begin{tabular}{>{\bfseries}l|c|c}
+\toprule
+\textbf{Characteristic} & \textcolor{optionA}{\textbf{Program A}} & \textcolor{optionB}{\textbf{Program B}} \\
+\midrule
+Screening method       & Ultrasound     & Mammography \\
+Screening frequency    & Every 2 years  & Every year \\
+Out-of-pocket cost     & \$150          & \$50 \\
+Sensitivity            & 95\%           & 85\% \\
+False positive rate    & 5\%            & 15\% \\
+Waiting time           & 3 weeks        & 1 week \\
+Pain/discomfort        & Mild           & None \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\vspace{0.4cm}
+\begin{center}
+\choicebox{} \textcolor{optionA}{\textbf{Program A}} \hspace{1.5cm}
+\choicebox{} \textcolor{optionB}{\textbf{Program B}} \hspace{1.5cm}
+\choicebox{} \textbf{Neither program}
+\end{center}
+
+
+%% ============================================================
+%% PART C: SOCIODEMOGRAPHIC QUESTIONS
+%% ============================================================
+\newpage
+\sectionheader{Part C: About You}
+
+\noindent The following questions are for statistical purposes only. Your responses are anonymous.
+
+\vspace{0.5cm}
+\textbf{C1. What is your age?}\\[0.2cm]
+\_\_\_\_\_\_ years
+
+\vspace{0.4cm}
+\textbf{C2. What is the highest level of education you have completed?}
+\begin{itemize}[label=$\square$]
+  \item Less than high school
+  \item High school diploma or GED
+  \item Some college or associate degree
+  \item Bachelor's degree
+  \item Master's degree
+  \item Doctoral or professional degree (PhD, MD, JD)
+  \item Prefer not to answer
+\end{itemize}
+
+\vspace{0.4cm}
+\textbf{C3. What is your annual household income before taxes?}
+\begin{itemize}[label=$\square$]
+  \item Less than \$25,000
+  \item \$25,000 -- \$49,999
+  \item \$50,000 -- \$74,999
+  \item \$75,000 -- \$99,999
+  \item \$100,000 -- \$149,999
+  \item \$150,000 or more
+  \item Prefer not to answer
+\end{itemize}
+
+\vspace{0.4cm}
+\textbf{C4. What is your current marital status?}
+\begin{itemize}[label=$\square$]
+  \item Single, never married
+  \item Married or in a domestic partnership
+  \item Divorced
+  \item Separated
+  \item Widowed
+  \item Prefer not to answer
+\end{itemize}
+
+\vspace{0.4cm}
+\textbf{C5. What is your current employment status?}
+\begin{itemize}[label=$\square$]
+  \item Employed full-time
+  \item Employed part-time
+  \item Self-employed
+  \item Unemployed
+  \item Retired
+  \item Student
+  \item Homemaker / stay-at-home parent
+  \item Unable to work / on disability
+  \item Prefer not to answer
+\end{itemize}
+
+\newpage
+\textbf{C6. What type of health insurance do you currently have? (Select all that apply)}
+\begin{itemize}[label=$\square$]
+  \item Employer-sponsored insurance
+  \item Individually purchased insurance (ACA marketplace)
+  \item Medicare
+  \item Medicaid / CHIP
+  \item Military / VA / TRICARE
+  \item No health insurance (uninsured)
+  \item Other: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+  \item Prefer not to answer
+\end{itemize}
+
+\vspace{0.4cm}
+\textbf{C7. Which of the following best describes your race/ethnicity? (Select all that apply)}
+\begin{itemize}[label=$\square$]
+  \item White / Caucasian
+  \item Black / African American
+  \item Hispanic / Latino/a
+  \item Asian / Asian American
+  \item Native American / Alaska Native
+  \item Native Hawaiian / Pacific Islander
+  \item Multiracial / Mixed
+  \item Other: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+  \item Prefer not to answer
+\end{itemize}
+
+\vspace{0.4cm}
+\textbf{C8. In general, how would you rate your overall health?}
+\begin{itemize}[label=$\square$]
+  \item Excellent
+  \item Very good
+  \item Good
+  \item Fair
+  \item Poor
+\end{itemize}
+
+\vspace{0.6cm}
+\noindent\textbf{\underline{Health Literacy}}
+
+\vspace{0.3cm}
+\textbf{C9. How confident are you filling out medical forms by yourself?}
+\begin{itemize}[label=$\square$]
+  \item Extremely confident
+  \item Quite confident
+  \item Somewhat confident
+  \item A little confident
+  \item Not at all confident
+\end{itemize}
+
+\vspace{0.4cm}
+\textbf{C10. How often do you have someone help you read hospital materials?}
+\begin{itemize}[label=$\square$]
+  \item Never
+  \item Rarely
+  \item Sometimes
+  \item Often
+  \item Always
+\end{itemize}
+
+\vspace{0.4cm}
+\textbf{C11. How often do you have problems learning about your medical condition because of difficulty understanding written information?}
+\begin{itemize}[label=$\square$]
+  \item Never
+  \item Rarely
+  \item Sometimes
+  \item Often
+  \item Always
+\end{itemize}
+
+\newpage
+\noindent\textbf{\underline{Risk Perception}}
+
+\vspace{0.3cm}
+\textbf{C12. Compared to other women your age, how would you rate your risk of developing breast cancer?}
+\begin{itemize}[label=$\square$]
+  \item Much lower than average
+  \item Somewhat lower than average
+  \item About average
+  \item Somewhat higher than average
+  \item Much higher than average
+  \item Don't know
+\end{itemize}
+
+\vspace{0.4cm}
+\textbf{C13. On a scale of 0 to 100, what do you think is the chance (in percent) that you will develop breast cancer in your lifetime?}\\[0.2cm]
+\_\_\_\_\_\_ \%
+
+\vspace{0.4cm}
+\textbf{C14. How worried are you about getting breast cancer?}
+\begin{itemize}[label=$\square$]
+  \item Not at all worried
+  \item A little worried
+  \item Somewhat worried
+  \item Very worried
+  \item Extremely worried
+\end{itemize}
+
+\vspace{0.6cm}
+\noindent\textbf{\underline{Screening Experience}}
+
+\vspace{0.3cm}
+\textbf{C15. How many mammograms have you had in your lifetime?}
+\begin{itemize}[label=$\square$]
+  \item None
+  \item 1--2
+  \item 3--5
+  \item 6--10
+  \item More than 10
+\end{itemize}
+
+\vspace{0.4cm}
+\textbf{C16. Overall, how would you rate your past experience with breast cancer screening?}
+\begin{itemize}[label=$\square$]
+  \item Very positive
+  \item Somewhat positive
+  \item Neutral
+  \item Somewhat negative
+  \item Very negative
+  \item Not applicable (never screened)
+\end{itemize}
+
+\vspace{0.4cm}
+\textbf{C17. Has a healthcare provider recommended that you get screened for breast cancer?}
+\begin{itemize}[label=$\square$]
+  \item Yes, and I followed the recommendation
+  \item Yes, but I did not follow the recommendation
+  \item No
+  \item Don't remember
+\end{itemize}
+
+
+%% ============================================================
+%% PART D: DEBRIEFING
+%% ============================================================
+\newpage
+\sectionheader{Part D: Debriefing}
+
+\noindent Thank you for completing the choice tasks. We have a few final questions about your experience.
+
+\vspace{0.5cm}
+\textbf{D1. How difficult did you find the choice tasks in Part B?}
+\begin{itemize}[label=$\square$]
+  \item Very easy
+  \item Somewhat easy
+  \item Neither easy nor difficult
+  \item Somewhat difficult
+  \item Very difficult
+\end{itemize}
+
+\vspace{0.4cm}
+\textbf{D2. Which screening characteristic was \underline{most important} to you when making your choices?}
+\begin{itemize}[label=$\square$]
+  \item Screening method (Mammography, MRI, Ultrasound)
+  \item Screening frequency
+  \item Out-of-pocket cost
+  \item Sensitivity (cancer detection rate)
+  \item False positive rate
+  \item Waiting time for results
+  \item Pain/discomfort level
+\end{itemize}
+
+\vspace{0.4cm}
+\textbf{D3. Which screening characteristic was \underline{least important} to you?}
+\begin{itemize}[label=$\square$]
+  \item Screening method (Mammography, MRI, Ultrasound)
+  \item Screening frequency
+  \item Out-of-pocket cost
+  \item Sensitivity (cancer detection rate)
+  \item False positive rate
+  \item Waiting time for results
+  \item Pain/discomfort level
+\end{itemize}
+
+\vspace{0.4cm}
+\textbf{D4. Did you use a specific strategy when making your choices? (Select all that apply)}
+\begin{itemize}[label=$\square$]
+  \item I focused mainly on one or two characteristics
+  \item I tried to consider all characteristics together
+  \item I compared the options on each characteristic one at a time
+  \item I chose the cheapest option most of the time
+  \item I chose the option with the highest sensitivity most of the time
+  \item I chose randomly
+  \item Other: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+\end{itemize}
+
+\vspace{0.4cm}
+\textbf{D5. Were there any attributes that were confusing or difficult to understand?}
+\begin{itemize}[label=$\square$]
+  \item No, all attributes were clear
+  \item Yes (please specify): \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+\end{itemize}
+
+\vspace{0.4cm}
+\textbf{D6. Did you consider the ``Neither'' option as a realistic possibility, or did you always choose one of the two programs?}
+\begin{itemize}[label=$\square$]
+  \item I always chose one of the two programs
+  \item I sometimes seriously considered ``Neither''
+  \item I chose ``Neither'' primarily to express dissatisfaction with both options
+  \item I chose ``Neither'' because I do not believe screening is necessary
+\end{itemize}
+
+\vspace{0.4cm}
+\textbf{D7. Is there anything else you would like to share about your breast cancer screening preferences or your experience with this survey?}\\[0.3cm]
+\noindent\rule{\textwidth}{0.4pt}\\[0.5cm]
+\noindent\rule{\textwidth}{0.4pt}\\[0.5cm]
+\noindent\rule{\textwidth}{0.4pt}\\[0.5cm]
+\noindent\rule{\textwidth}{0.4pt}
+
+\vspace{1cm}
+\begin{center}
+\fbox{\parbox{0.8\textwidth}{\centering
+\large\textbf{Thank you for completing this survey!}\\[0.3cm]
+\normalsize Your responses are valuable and will contribute to improving breast cancer screening programs.\\[0.3cm]
+If you have questions about this study, please contact:\\
+{[PI Name]} at {[email]} or {[phone number]}.
+}}
+\end{center}
+
+\end{document}

@@ -1,0 +1,47 @@
+\begin{table}[htbp]
+\centering
+\caption{Conditional Logit Model Results}
+\label{tab:cl_results}
+\begin{tabular}{lrrr}
+\toprule
+Attribute Level & Coefficient (SE) & $p$-value & OR \\
+\midrule
+MRI vs.\ Mammography & 0.3196*** & 0.0000 & 1.377 \\
+ & (0.0527) & & \\
+Ultrasound vs.\ Mammography & -0.1847*** & 0.0003 & 0.831 \\
+ & (0.0508) & & \\
+Biennial vs.\ Annual & -0.1541** & 0.0016 & 0.857 \\
+ & (0.0489) & & \\
+Triennial vs.\ Annual & -0.3536*** & 0.0000 & 0.702 \\
+ & (0.0465) & & \\
+Cost (per \$1) & -0.0049*** & 0.0000 & 0.995 \\
+ & (0.0002) & & \\
+Sensitivity (per 1 pp) & 0.0364*** & 0.0000 & 1.037 \\
+ & (0.0023) & & \\
+False positive rate (per 1 pp) & -0.0497*** & 0.0000 & 0.952 \\
+ & (0.0071) & & \\
+1 week vs.\ 1 day wait & -0.1889* & 0.0247 & 0.828 \\
+ & (0.0841) & & \\
+3 weeks vs.\ 1 day wait & -0.4908*** & 0.0000 & 0.612 \\
+ & (0.0806) & & \\
+Mild vs.\ None & -0.1827* & 0.0247 & 0.833 \\
+ & (0.0814) & & \\
+Moderate vs.\ None & -0.3372*** & 0.0000 & 0.714 \\
+ & (0.0815) & & \\
+Opt-out (no screening) & 0.8010*** & 0.0005 & 2.228 \\
+ & (0.2285) & & \\
+\midrule
+Log-likelihood & \multicolumn{3}{c}{-5719.81} \\
+AIC & \multicolumn{3}{c}{11463.61} \\
+BIC & \multicolumn{3}{c}{11544.01} \\
+McFadden $R^2$ & \multicolumn{3}{c}{0.1323} \\
+N (choice obs.) & \multicolumn{3}{c}{6000} \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}
+\small
+\item Note: *** $p < 0.001$, ** $p < 0.01$, * $p < 0.05$, . $p < 0.1$.
+\item OR = odds ratio. SE in parentheses.
+\end{tablenotes}
+\end{table}
+
